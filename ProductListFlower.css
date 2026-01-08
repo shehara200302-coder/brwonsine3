@@ -1,0 +1,345 @@
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-primary, Arial, sans-serif);
+  color: var(--text-dark, #111);
+  background: var(--bg-white, #fff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.Header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  border-bottom: 1px solid var(--border-color, #eee);
+  position: sticky;
+  top: 0;
+  background: var(--bg-white, #fff);
+  z-index: 100;
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0, 0, 0, 0.05));
+}
+
+.Logo img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
+
+.HeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--text-dark, #111);
+  font-weight: var(--font-weight-medium, 600);
+  position: relative;
+  padding: 4px 0;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-brown, #8B5E3C);
+  transition: width var(--transition-fast, 0.2s ease);
+}
+
+.nav a:hover::after { width: 100%; }
+
+.nav a:hover { color: var(--primary-brown, #8B5E3C); }
+
+.ThemeToggle {
+  border: 1px solid #111;
+  background: #fff;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.ProductsPage {
+  width: 100%;
+  padding: 40px 64px;
+  flex: 1;
+}
+
+.CategoryTitle {
+  font-size: 44px;
+  font-weight: 800;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+.ProductsLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  margin-top: 0;
+}
+
+/* SIDEBAR */
+.SideBar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.SideBar h2 {
+  margin: 0 0 14px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+/* Price Slider */
+.PriceSliderContainer {
+  margin-top: 8px;
+}
+
+.PriceSliderLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.PriceSlider {
+  width: 100%;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.PriceSliderValue {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.SideList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+}
+
+.SideList li { 
+  margin: 10px 0; 
+}
+
+.SideList a {
+  text-decoration: none;
+  color: var(--text-dark, #111);
+  font-weight: var(--font-weight-bold, 700);
+  transition: color var(--transition-fast, 0.2s ease);
+  display: block;
+}
+
+.SideList a:hover { 
+  color: var(--primary-brown, #8B5E3C); 
+}
+
+.SideList a.Active {
+  color: var(--primary-brown, #8B5E3C);
+  font-weight: var(--font-weight-black, 800);
+}
+
+
+/* PRODUCTS */
+.ProductGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  justify-content: start;
+  column-gap: 90px;
+  row-gap: 70px;
+}
+
+.Product-Card {
+  text-align: left;
+  transition: all var(--transition-normal, 0.3s ease);
+}
+
+.Product-Card:hover { transform: translateY(-4px); }
+
+.Product-Image {
+  width: 260px;
+  height: 240px;
+  border: 2px solid var(--border-dark, #111);
+  border-radius: var(--radius-lg, 12px);
+  overflow: hidden;
+  transition: all var(--transition-normal, 0.3s ease);
+}
+
+.Product-Card:hover .Product-Image {
+  border-color: var(--primary-brown, #8B5E3C);
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.Product-Image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.Product-Card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.Price {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--primary-brown, #8B5E3C);
+}
+
+.Cart-Button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-dark, #111);
+  background: var(--bg-white, #fff);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast, 0.2s ease);
+  border-radius: var(--radius-sm, 4px);
+}
+
+.Cart-Button:hover {
+  background: var(--primary-brown, #8B5E3C);
+  border-color: var(--primary-brown, #8B5E3C);
+  color: var(--bg-white, #fff);
+}
+
+/* FOOTER */
+.Footer {
+  background: #2E2A26;
+  color: #ffffff;
+  margin-top: 48px;
+  padding: 50px 64px 30px;
+  border-top: 3px solid var(--primary-brown, #8B5E3C);
+}
+
+.Footer-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Footer-left h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.Footer-left p {
+  margin: 0;
+  color: #E5E3DF;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.Footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Footer-links a {
+  color: #E5E3DF;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.Footer-links a:hover { color: var(--primary-brown, #8B5E3C); }
+
+.Footer-Social p {
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.Social-Icons {
+  display: flex;
+  gap: 16px;
+}
+
+.Social-Icons i {
+  font-size: 22px;
+  color: #E5E3DF;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .ProductGrid {
+    grid-template-columns: repeat(3, 260px);
+    column-gap: 60px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ProductGrid {
+    grid-template-columns: repeat(2, 260px);
+    column-gap: 40px;
+  }
+  
+  .ProductsLayout {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ProductsPage {
+    padding: 30px 20px;
+  }
+  
+  .Header {
+    padding: 0 20px;
+  }
+  
+  .ProductsLayout {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .SideBar {
+    width: 100%;
+  }
+  
+  .ProductGrid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+  
+  .Product-Image {
+    width: 100%;
+    max-width: 260px;
+  }
+  
+  .CategoryTitle {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+  }
+}

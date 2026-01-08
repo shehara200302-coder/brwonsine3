@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation | Loom & Lane</title>
+    <link rel="stylesheet" href="../CSS/theme.css" />
+    <link rel="stylesheet" href="../CSS/OderConfirmation2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="Header">
+      <div class="Logo">
+
+        <a href="HomePage.html"><img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" /></a>
+
+      </div>
+
+      <div class="Header-Right">
+        <nav class="nav" aria-label="Main Navigation">
+
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+
+        <button class="Theme-toggle" aria-label="Toggle dark mode" type="button">
+
+          <i class="fa-solid fa-moon"></i>
+
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="Confirm-Main">
+      <section class="Confirm-Card" aria-label="Order Confirmation">
+
+        <!-- Top -->
+        <div class="Confirm-Cop">
+          <div class="Check-Ccon" aria-hidden="true">
+
+            <i class="fa-solid fa-check"></i>
+
+          </div>
+
+          <h1>Thank you for your order</h1>
+          <p class="Crder-Cd">Order ID: LL-2025-1217</p>
+
+        </div>
+
+        <!-- Items -->
+        <div class="Confirm-Items">
+          <!-- Cart items will be loaded dynamically by OrderConfirmation.js -->
+        </div>
+
+        <!-- Bottom info -->
+        <div class="Confirm-Bottom">
+          <div class="Delivery-Info">
+
+            <p class="Bottom-Title">Delivery Information:</p>
+            <p>105/4 Rajamahawihara road,<br />Maharagama.</p>
+
+          </div>
+
+          <div class="Delivery-Estimate">
+
+            <p class="Bottom-Title">Estimated delivery:</p>
+            <p>DEC 23<sup>rd</sup></p>
+
+          </div>
+        </div>
+      </section>
+
+      <a class="Continue-Button" href="ProductList.html?category=flower">Continue Shopping</a>
+
+    </main>
+
+    <footer class="Footer">
+      <div class="Footer-Wrap Footer-Inner">
+        <div class="Footer-Left">
+          <a href="HomePage.html" class="Footer-Logo">
+            <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" />
+          </a>
+          <h3>Loom & Lane</h3>
+          <p>
+            A curated collection of handcrafted decor, wooden crafts and porcelain pieces celebrating Sri Lankan craftsmanship.
+          </p>
+        </div>
+
+        <nav class="Footer-Links" aria-label="Footer Links">
+
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+
+        <div class="Footer-Social">
+
+          <p>Follow Us</p>
+
+          <div class="Social-Icons">
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../Js/cart.js"></script>
+    <script src="../Js/OrderConfirmation.js"></script>
+    <script src="../Js/theme.js"></script>
+  </body>
+</html>

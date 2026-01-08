@@ -1,0 +1,415 @@
+
+:root {
+  /* PRIMARY COLOURS - WARM EARTH TONES */
+  --primary-brown: #8B5E3C;
+  --primary-brown-dark: #6B4628;
+  --primary-brown-light: #A67C52;
+  --primary-brown-lighter: #C49A6F;
+  
+  /* SECONDARY COLOURS */
+  --cream: #FAF7F2;
+  --cream-dark: #F5F0E8;
+  --beige: #EDE6DA;
+  --beige-dark: #E0D5C4;
+  
+  /* ACCENT COLOURS */
+  --accent-gold: #D4AF37;
+  --accent-terracotta: #C17A5F;
+  
+  /* NEUTRAL COLOURS */
+  --text-dark: #1F1F1F;
+  --text-medium: #4A4A4A;
+  --text-light: #6B6B6B;
+  --border-color: #E0E0E0;
+  --border-dark: #111111;
+  
+  /* BACKGROUND COLOURS */
+  --bg-white: #FFFFFF;
+  --bg-cream: #FAF7F2;
+  --bg-light: #F9F9F9;
+  
+  /* DARK MODE COLOURS */
+  --dark-bg: #1A1A1A;
+  --dark-surface: #2B2B2B;
+  --dark-surface-light: #3A3A3A;
+  --dark-text: #E0E0E0;
+  --dark-text-muted: #B0B0B0;
+  --dark-border: #3A3A3A;
+  
+  /* FOOTER*/
+  --footer-bg: #2E2A26;
+  --footer-text: #E5E3DF;
+  
+  /* TYPOGRAPHY DEFAULTS */
+  --font-primary: 'Arial', 'Helvetica', sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+  
+  /* SPACING */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* BORDER RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 14px;
+  
+  /* TRANSITION */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  
+  /* SHADOWS */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 6px 20px rgba(139, 94, 60, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-black);
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 36px;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+  color: var(--text-medium);
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-brown);
+}
+
+
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  outline: none;
+}
+
+.Primary-Button,
+button[type="button"]:not(.Theme-toggle):not(.Cart-Button):not(.Featured-Cart-Button):not(.QuantityButton):not(.RemoveButton) {
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--primary-brown);
+  background: transparent;
+  color: var(--text-dark);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.Primary-Button:hover,
+button[type="button"]:not(.Theme-toggle):not(.Cart-Button):not(.Featured-Cart-Button):not(.QuantityButton):not(.RemoveButton):hover {
+  background: var(--primary-brown);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* CARDS & CONTAINERS */
+
+.Featured-Product-Card,
+.Product-Card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.Featured-Product-Card:hover,
+.Product-Card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-brown);
+}
+
+/* I ADDED THIS TO, HEADER STICKY LOOK AND LINK UNDERLINE ANIMATION */
+
+.Header {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav a {
+  position: relative;
+  padding: 4px 0;
+  transition: color var(--transition-fast);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-brown);
+  transition: width var(--transition-fast);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* SEARCH SECTION */
+
+.Search-Section {
+  background: var(--bg-cream);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.Search-Section:focus-within {
+  border-color: var(--primary-brown);
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.1);
+}
+
+/* CATEGORY CARDS */
+
+.Category-Card {
+  transition: all var(--transition-normal);
+}
+
+.Category-Card:hover {
+  transform: translateY(-4px);
+}
+
+.Category-Card:hover .Image-Box {
+  border-color: var(--primary-brown);
+  box-shadow: var(--shadow-md);
+}
+
+.Category-Card:hover p {
+  color: var(--primary-brown);
+}
+
+.Image-Box {
+  transition: all var(--transition-normal);
+  border: 2px solid var(--border-dark);
+}
+
+/* PRICE STYLING */
+
+.Price,
+.Featured-Price {
+  color: var(--primary-brown);
+  font-weight: var(--font-weight-bold);
+}
+
+/* CART BUTTONS */
+
+.Cart-Button,
+.Featured-Cart-Button {
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-dark);
+}
+
+.Cart-Button:hover,
+.Featured-Cart-Button:hover {
+  background: var(--primary-brown);
+  border-color: var(--primary-brown);
+  color: var(--bg-white);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+
+.Footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  border-top: 2px solid var(--primary-brown-dark);
+}
+
+.Footer-links a {
+  color: var(--footer-text);
+  transition: color var(--transition-fast);
+}
+
+.Footer-links a:hover {
+  color: var(--primary-brown-lighter);
+  text-decoration: underline;
+}
+
+.Social-Icons i {
+  color: var(--footer-text);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.Social-Icons i:hover {
+  color: var(--primary-brown-lighter);
+  transform: scale(1.2);
+}
+
+/*  DARK MODE THEME */
+
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark .Header {
+  background: var(--dark-surface);
+  border-bottom-color: var(--dark-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .nav a {
+  color: var(--dark-text);
+}
+
+body.dark .nav a:hover {
+  color: var(--primary-brown-lighter);
+}
+
+body.dark .Featured-Product-Card,
+body.dark .Product-Card {
+  background: var(--dark-surface);
+  border-color: var(--dark-border);
+}
+
+body.dark .Featured-Product-Card:hover,
+body.dark .Product-Card:hover {
+  border-color: var(--primary-brown);
+  box-shadow: 0 6px 20px rgba(139, 94, 60, 0.3);
+}
+
+body.dark .Search-Section {
+  background: var(--dark-surface);
+  border-color: var(--dark-border);
+}
+
+body.dark .Search-Section:focus-within {
+  border-color: var(--primary-brown);
+}
+
+body.dark .Image-Box {
+  border-color: var(--dark-border);
+}
+
+body.dark .Category-Card:hover .Image-Box {
+  border-color: var(--primary-brown);
+}
+
+body.dark .Price,
+body.dark .Featured-Price {
+  color: var(--primary-brown-lighter);
+}
+
+body.dark .Footer {
+  background: var(--dark-bg);
+  border-top-color: var(--dark-border);
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  color: var(--dark-text);
+}
+
+body.dark p {
+  color: var(--dark-text-muted);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Featured-Product-Card,
+.Product-Card,
+.Category-Card {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* RESPONSIVE ENHANCEMENTS */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  .Primary-Button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* UTILITY CLASSES */
+
+.text-primary {
+  color: var(--primary-brown);
+}
+
+.bg-cream {
+  background-color: var(--bg-cream);
+}
+
+.border-primary {
+  border-color: var(--primary-brown);
+}
+
+.shadow-hover {
+  box-shadow: var(--shadow-hover);
+}
+
+
+

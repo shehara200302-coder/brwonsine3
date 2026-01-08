@@ -1,0 +1,811 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --bgmain:var(--bg-cream, #FAF7F2);
+  --textmain:var(--text-dark, #1F1F1F);
+  --bordermain:var(--border-dark, #111);
+
+  --primary:var(--primary-brown, #8B5E3C);
+  --secondary:var(--beige, #EDE6DA);
+  --accent:var(--accent-gold, #9C8B5E);
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bgmain);
+  color:var(--textmain);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.page{
+  width:100%;
+}
+
+.siteheader{
+  background:var(--secondary);
+  border-bottom:2px solid var(--bordermain);
+}
+
+.headerinner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 24px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brandlogo{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+}
+
+.brandname{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+  line-height:1.1;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:18px;
+}
+
+.nav a:hover{
+  text-decoration:underline;
+}
+
+.iconbtn{
+  width:36px;
+  height:36px;
+  border:1.5px solid var(--bordermain);
+  background:var(--secondary);
+  cursor:pointer;
+  border-radius:4px;
+  display:grid;
+  place-items:center;
+}
+
+.Theme-toggle {
+  border: 1px solid var(--bordermain);
+  background: var(--secondary);
+  width: 56px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.carttitlebar{
+  border-bottom:2px solid var(--bordermain);
+  padding:18px 24px;
+  background:var(--bgmain);
+}
+
+.carttitle{
+  font-size:42px;
+  font-weight:800;
+}
+
+.CartArea{
+  position:relative;
+  border-bottom:2px solid var(--bordermain);
+  padding:26px 24px 70px 24px;
+  background:var(--bgmain);
+}
+
+.CartGrid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:0;
+  border:2px solid var(--bordermain);
+}
+
+.CartLeft{
+  border-right:2px solid var(--bordermain);
+  padding:26px;
+  background:var(--bgmain);
+}
+
+.CartBox{
+  border:2px solid var(--bordermain);
+  padding:22px;
+  background:#fff;
+}
+
+.CartRow{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:26px;
+  align-items:center;
+  padding:18px 8px;
+}
+
+.CartRow + .CartRow{
+  margin-top:10px;
+}
+
+.ImgBox{
+  width:120px;
+  height:120px;
+  border:2px solid var(--bordermain);
+  display:grid;
+  place-items:center;
+  font-weight:700;
+  background:var(--bgmain);
+}
+
+.RowInfo{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.PName{
+  font-weight:700;
+  font-size:18px;
+}
+
+.PPrice{
+  font-size:16px;
+}
+
+.QtyControls{
+  width:100px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#ddd;
+  border-radius:6px;
+  padding:6px 8px;
+  margin-top:4px;
+}
+
+.QuantityButton{
+  border:none;
+  background:transparent;
+  font-size:18px;
+  font-weight:var(--font-weight-black, 800);
+  cursor:pointer;
+  width:22px;
+  transition: all var(--transition-fast, 0.2s ease);
+  color: var(--text-dark, #1F1F1F);
+}
+
+.QuantityButton:hover {
+  color: var(--primary-brown, #8B5E3C);
+  transform: scale(1.2);
+}
+
+.QuantityNum{
+  font-size:16px;
+  font-weight:700;
+}
+
+.ContinueLink{
+  display:inline-block;
+  margin-top:14px;
+  text-decoration:underline;
+  font-weight:700;
+}
+
+.CartRight{
+  padding:26px;
+  background:var(--bgmain);
+}
+
+.SummaryTitle{
+  text-align:center;
+  font-size:34px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.SummaryBox{
+  border:2px solid var(--bordermain);
+  padding:22px;
+  background:#fff;
+  min-height:360px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.SumLine{
+  display:grid;
+  grid-template-columns:1fr 40px 1fr;
+  align-items:center;
+  gap:8px;
+  font-size:22px;
+  font-weight:700;
+  margin-top:6px;
+}
+
+.SumLabel{
+  text-align:left;
+}
+
+.SumEquation{
+  text-align:center;
+}
+
+.SumValue{
+  text-align:left;
+}
+
+.SumSpacer{
+  height:26px;
+}
+
+.SumTotal{
+  margin-top:10px;
+}
+
+.CheckoutButton{
+  display:block;
+  width:70%;
+  margin:0 auto;
+  text-align:center;
+  padding:14px 16px;
+  background:var(--primary-brown, #000);
+  color:#fff;
+  font-size:22px;
+  font-weight:var(--font-weight-black, 800);
+  border-radius:var(--radius-md, 6px);
+  transition: all var(--transition-fast, 0.2s ease);
+  border: 2px solid var(--primary-brown, #000);
+}
+
+.CheckoutButton:hover{
+  background:var(--primary-brown-dark, #6B4628);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.ChatButton{
+  position:absolute;
+  right:24px;
+  bottom:14px;
+  width:56px;
+  height:56px;
+  border:2px solid var(--bordermain);
+  border-radius:50%;
+  background:#fff;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+}
+
+.Footer{
+  padding:50px 64px 30px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:50px;
+  align-items:start;
+  background:#2E2A26;
+  border-top:3px solid var(--primary-brown, #8B5E3C);
+  color:#fff;
+  margin-top:48px;
+}
+
+.Footer-Logo {
+  display: inline-block;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease;
+}
+
+.Footer-Logo:hover {
+  transform: scale(1.05);
+}
+
+.Footer-Logo img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+  filter: brightness(1.1);
+}
+
+.FooterLeft h3{
+  margin:0 0 12px;
+  font-size:20px;
+  font-weight:700;
+  color:#ffffff;
+  letter-spacing:0.5px;
+}
+
+.FooterLeft p{
+  max-width:100%;
+  line-height:1.7;
+  color:#E5E3DF;
+  font-size:14px;
+  margin:0;
+}
+
+.Links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:0;
+}
+
+.Links a{
+  color:#E5E3DF;
+  text-decoration:none;
+  font-size:15px;
+  transition:color 0.2s ease;
+  padding:4px 0;
+}
+
+.Links a:hover{
+  color:var(--primary-brown, #8B5E3C);
+  text-decoration:none;
+  padding-left:4px;
+}
+
+.FooterSocial{
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+}
+
+.FooterSocial p{
+  font-weight:600;
+  font-size:16px;
+  margin:0 0 16px;
+  color:#ffffff;
+  letter-spacing:0.3px;
+}
+
+.socialicons i{
+  font-size:40px;
+  margin:0 10px;
+  cursor:pointer;
+}
+
+/* Dark mode */
+body.dark{
+  background:#1a1a1a;
+  color:#e0e0e0;
+}
+
+body.dark .siteheader{
+  background:#2b2b2b;
+  border-bottom-color:#3a3a3a;
+}
+
+body.dark .nav a{
+  color:#e0e0e0;
+}
+
+body.dark .nav a:hover{
+  color:#8B5E3C;
+}
+
+body.dark .iconbtn{
+  background:#2b2b2b;
+  border-color:#e0e0e0;
+  color:#e0e0e0;
+}
+
+body.dark .Theme-toggle {
+  background: #2b2b2b;
+  border-color: #e0e0e0;
+  color: #e0e0e0;
+}
+
+body.dark .Theme-toggle:hover {
+  background: #8B5E3C;
+  border-color: #8B5E3C;
+  color: #fff;
+}
+
+body.dark .Cart-Icon-Wrapper{
+  background:#2b2b2b;
+  border-color:#e0e0e0;
+  color:#e0e0e0;
+}
+
+body.dark .carttitlebar{
+  background:#1a1a1a;
+  border-bottom-color:#3a3a3a;
+}
+
+body.dark .carttitle{
+  color:#e0e0e0;
+}
+
+body.dark .CartArea{
+  background:#1a1a1a;
+  border-bottom-color:#3a3a3a;
+}
+
+body.dark .CartGrid{
+  border-color:#3a3a3a;
+}
+
+body.dark .CartLeft{
+  background:#1a1a1a;
+  border-right-color:#3a3a3a;
+}
+
+body.dark .CartBox{
+  background:#2b2b2b;
+  border-color:#3a3a3a;
+}
+
+body.dark .CartRow{
+  border-bottom-color:#3a3a3a;
+}
+
+body.dark .ImgBox{
+  background:#1a1a1a;
+  border-color:#3a3a3a;
+}
+
+body.dark .PName{
+  color:#e0e0e0;
+}
+
+body.dark .PPrice{
+  color:#8B5E3C;
+}
+
+body.dark .QtyControls{
+  background:#3a3a3a;
+  color:#e0e0e0;
+}
+
+body.dark .QuantityButton{
+  color:#e0e0e0;
+}
+
+body.dark .QuantityButton:hover{
+  color:#8B5E3C;
+}
+
+body.dark .QuantityNum{
+  color:#e0e0e0;
+}
+
+body.dark .ItemTotal{
+  color:#8B5E3C;
+}
+
+body.dark .RemoveButton{
+  background:#8B5E3C;
+  color:#fff;
+}
+
+body.dark .RemoveButton:hover{
+  background:#a07050;
+}
+
+body.dark .ContinueLink{
+  color:#8B5E3C;
+}
+
+body.dark .CartRight{
+  background:#1a1a1a;
+}
+
+body.dark .SummaryTitle{
+  color:#e0e0e0;
+}
+
+body.dark .SummaryBox{
+  background:#2b2b2b;
+  border-color:#3a3a3a;
+}
+
+body.dark .SumLabel{
+  color:#b0b0b0;
+}
+
+body.dark .SumValue{
+  color:#e0e0e0;
+}
+
+body.dark .SumTotal .SumLabel,
+body.dark .SumTotal .SumValue{
+  color:#8B5E3C;
+  font-weight:800;
+}
+
+body.dark .CheckoutButton{
+  background:#8B5E3C;
+  color:#fff;
+}
+
+body.dark .CheckoutButton:hover{
+  background:#a07050;
+}
+
+body.dark .ChatButton{
+  background:#2b2b2b;
+  border-color:#3a3a3a;
+  color:#e0e0e0;
+}
+
+body.dark .ChatButton:hover{
+  background:#8B5E3C;
+  border-color:#8B5E3C;
+  color:#fff;
+}
+
+/* Chat Popup - Import from HomePageDec.css or add here */
+.Chat-Popup {
+  position: fixed;
+  right: 18px;
+  bottom: 80px;
+  width: 350px;
+  max-width: calc(100vw - 36px);
+  height: 500px;
+  max-height: calc(100vh - 100px);
+  background: var(--bg-white, #fff);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color, #eee);
+}
+
+.Chat-Popup-Open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.Chat-Popup-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color, #eee);
+  background: var(--primary-brown, #8B5E3C);
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+}
+
+.Chat-Popup-Header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.Chat-Close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Chat-Close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.Chat-Messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-cream, #fafafa);
+}
+
+.Chat-Message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.Chat-Message p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.Chat-Message-Bot {
+  align-self: flex-start;
+  background: var(--bg-white, #fff);
+  border: 1px solid var(--border-color, #eee);
+  color: var(--text-dark, #111);
+}
+
+.Chat-Message-User {
+  align-self: flex-end;
+  background: var(--primary-brown, #8B5E3C);
+  color: #fff;
+}
+
+.Chat-Input-Area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-color, #eee);
+  background: var(--bg-white, #fff);
+  border-radius: 0 0 16px 16px;
+}
+
+.Chat-Input-Area input {
+  flex: 1;
+  border: 1px solid var(--border-color, #eee);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.Chat-Input-Area input:focus {
+  border-color: var(--primary-brown, #8B5E3C);
+}
+
+.Chat-Send {
+  background: var(--primary-brown, #8B5E3C);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.Chat-Send:hover {
+  background: var(--primary-brown-dark, #6B4628);
+  transform: scale(1.1);
+}
+
+body.dark .Chat-Popup {
+  background: #2b2b2b;
+  border-color: #3a3a3a;
+}
+
+body.dark .Chat-Popup-Header {
+  background: #8B5E3C;
+  border-bottom-color: #3a3a3a;
+}
+
+body.dark .Chat-Messages {
+  background: #1a1a1a;
+}
+
+body.dark .Chat-Message-Bot {
+  background: #2b2b2b;
+  border-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+body.dark .Chat-Message-User {
+  background: #8B5E3C;
+  color: #fff;
+}
+
+body.dark .Chat-Input-Area {
+  background: #2b2b2b;
+  border-top-color: #3a3a3a;
+}
+
+body.dark .Chat-Input-Area input {
+  background: #1a1a1a;
+  border-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+body.dark .Chat-Input-Area input::placeholder {
+  color: #888;
+}
+
+body.dark .Chat-Input-Area input:focus {
+  border-color: #8B5E3C;
+}
+
+body.dark .Footer{
+  background:#1a1a1a;
+  border-top-color:#3a3a3a;
+}
+
+body.dark .FooterLeft h3{
+  color:#e0e0e0 !important;
+}
+
+body.dark .FooterLeft p{
+  color:#b0b0b0 !important;
+}
+
+body.dark .Links a{
+  color:#e0e0e0 !important;
+}
+
+body.dark .Links a:hover{
+  color:#8B5E3C !important;
+}
+
+body.dark .FooterSocial p{
+  color:#e0e0e0 !important;
+}
+
+body.dark .ItemTotal{
+  color:#8B5E3C !important;
+}
+
+body.dark .QuantityNum{
+  color:#e0e0e0 !important;
+}
+
+@media (max-width:900px){
+  .CartGrid{
+    grid-template-columns:1fr;
+  }
+
+  .CartLeft{
+    border-right:none;
+    border-bottom:2px solid var(--bordermain);
+  }
+
+  .SumLine{
+    font-size:18px;
+  }
+
+  .CheckoutButton{
+    width:100%;
+    font-size:18px;
+  }
+
+  .Footer{
+    grid-template-columns:1fr;
+  }
+
+  .FooterSocial{
+    justify-self:start;
+    text-align:left;
+  }
+
+  .nav{
+    gap:14px;
+    font-size:16px;
+  }
+
+  .carttitle{
+    font-size:34px;
+  }
+}

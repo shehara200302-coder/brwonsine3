@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Loom & Lane</title>
+    <link rel="stylesheet" href="../CSS/theme.css" />
+    <link rel="stylesheet" href="../CSS/HomePageDec.css" />
+    <link rel="stylesheet" href="../CSS/dark-theme-overrides.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+
+  <body>
+
+      <!--Header-->
+      <header class="Header">
+      <div class="logo">
+
+        <a href="HomePage.html"><img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" /></a>
+
+      </div>
+
+      <div class="Header-right">
+        <nav class="nav" aria-label="Main Navigation">
+
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+
+        <!-- Cart icon uses inline styles here because it was easier to position quickly -->
+        <a href="Cart.html" class="Cart-Icon-Link" aria-label="Shopping Cart" style="position: relative; display: inline-block; margin-right: 10px; text-decoration: none;">
+
+          <div class="Cart-Icon-Wrapper" style="border: 1px solid #111; background: #fff; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; padding: 0;">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="Cart-Icon-Badge" style="position: absolute; top: -8px; right: -8px; background: #8B5E3C; color: white; border-radius: 50%; width: 20px; height: 20px; display: none; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; line-height: 20px;">0</span>
+            
+          </div>
+
+        </a>
+        <button class="Theme-toggle" aria-label="Toggle dark mode" type="button">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        </div>
+       </header>
+
+    <main>
+      <section class="Hero">
+
+        <h1>About Loom & Lane</h1>
+        <p>Celebrating Sri Lankan Craftsmanship</p>
+
+      </section>
+      
+       <!-- I added inline CSS code instead of creating a separate CSS file -->
+      <section class="Wrap" style="padding-top: 40px; padding-bottom: 40px;">
+
+        <!-- I used inline padding here to keep spacing consistent -->
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h2 style="font-size: 32px; margin-bottom: 24px; text-align: center;">Our Story</h2>
+          <p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px; color: #333;">
+
+            Loom & Lane is a curated collection of handcrafted decor, wooden crafts, and porcelain pieces 
+            that celebrate the rich tradition of Sri Lankan craftsmanship. We bring together the finest 
+            artisans and their timeless creations to your modern living spaces.
+
+          </p>
+          <p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px; color: #333;">
+
+            Our mission is to preserve and promote the beautiful artisanal heritage of Sri Lanka while 
+            making these exquisite pieces accessible to those who appreciate quality, authenticity, and 
+            the story behind each handcrafted item.
+
+          </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 40px auto 0;">
+
+          <h2 style="font-size: 32px; margin-bottom: 24px; text-align: center;">Our Values</h2>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px;">
+            <div style="text-align: center;">
+              <i class="fa-solid fa-hands-holding" style="font-size: 48px; color: #8B5E3C; margin-bottom: 16px;"></i>
+              <h3 style="font-size: 20px; margin-bottom: 12px;">Handcrafted Quality</h3>
+
+              <p style="font-size: 14px; line-height: 1.6; color: #666;">
+
+                Every piece is carefully handcrafted by skilled artisans using traditional techniques passed down through generations.
+
+              </p>
+            </div>
+
+            <div style="text-align: center;">
+
+              <i class="fa-solid fa-leaf" style="font-size: 48px; color: #8B5E3C; margin-bottom: 16px;"></i>
+              <h3 style="font-size: 20px; margin-bottom: 12px;">Sustainable Practices</h3>
+              <p style="font-size: 14px; line-height: 1.6; color: #666;">
+
+                We source materials responsibly and support local communities while maintaining environmental consciousness.
+
+              </p>
+            </div>
+
+            <div style="text-align: center;">
+
+              <i class="fa-solid fa-heart" style="font-size: 48px; color: #8B5E3C; margin-bottom: 16px;"></i>
+              <h3 style="font-size: 20px; margin-bottom: 12px;">Authentic Heritage</h3>
+              <p style="font-size: 14px; line-height: 1.6; color: #666;">
+
+                Each product tells a story of Sri Lankan culture, tradition, and the artisan's dedication to their craft.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Static branch list, no dynamic data used -->
+      <section class="Wrap Branches" aria-label="Our Branches">
+
+        <p class="branch-title">Visit Us:</p>
+        <p><i class="fa-solid fa-location-dot"></i> Colombo</p>
+        <p><i class="fa-solid fa-location-dot"></i> Galle</p>
+        <p><i class="fa-solid fa-location-dot"></i> Kandy</p>
+        <p><i class="fa-solid fa-location-dot"></i> Kalutara</p>
+        <p><i class="fa-solid fa-location-dot"></i> Anuradhapura</p>
+
+      </section>
+
+      <button class="Chat-Button" type="button" aria-label="Chat with us" id="chatButton">
+        <i class="fa-solid fa-comment"></i>
+        <span>Chat with us</span>
+      </button>
+
+      <!-- Messages are appended dynamically using JavaScript -->
+      <div class="Chat-Popup" id="chatPopup">
+        <div class="Chat-Popup-Header">
+
+          <h3>Chat with us</h3>
+          <button class="Chat-Close" type="button" aria-label="Close chat" id="chatClose">
+            <i class="fa-solid fa-times"></i>
+          </button>
+
+        </div>
+
+        <div class="Chat-Messages" id="chatMessages">
+          <div class="Chat-Message Chat-Message-Bot">
+
+            <p>Hello! How can we help you today ?</p>
+
+          </div>
+        </div>
+
+        <div class="Chat-Input-Area">
+
+          <input type="text" id="chatInput" placeholder="Type your message..." />
+          <button type="button" class="Chat-Send" aria-label="Send message" id="chatSend">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer content reused across pages -->
+    <footer class="Footer">
+      <div class="Footer-wrap Footer-inner">
+        <div class="Footer-left">
+
+          <a href="HomePage.html" class="Footer-Logo">
+            <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" />
+          </a>
+          <h3>Loom & Lane</h3>
+          <p> A curated collection of handcrafted decor, wooden crafts and porcelain pieces celebrating Sri Lankan craftsmanship. </p>
+
+           </div>
+        <!--Footer Links-->
+        <nav class="Footer-links" aria-label="Footer Links">
+
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+ 
+        <div class="Footer-Social">
+
+          <p>Follow Us</p>
+
+          <div class="Social-Icons">
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../Js/cart.js"></script>
+    <script src="../Js/theme.js"></script>
+    <script src="../Js/chat.js"></script>
+  </body>
+</html>
+
+

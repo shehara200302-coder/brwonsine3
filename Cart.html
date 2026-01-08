@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | Loom & Lane</title>
+    <link rel="stylesheet" href="../CSS/theme.css" />
+    <!-- Cart page specific layout and styling -->
+    <link rel="stylesheet" href="../CSS/Cart.css" />
+    <link rel="stylesheet" href="../CSS/dark-theme-overrides.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  </head>
+
+  <body>
+    <!-- Header is reused across pages for consistent navigation -->
+    <header class="siteheader">
+      <div class="headerinner">
+
+        <a class="brand" href="HomePage.html" aria-label="Loom & Lane Home">
+          <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane logo" class="brandlogo" />
+          <span class="brandname">LOOM<br />AND LANE</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <!-- Main navigation links -->
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+        <!-- I used inline CSS code for crat icon, because it was quicker to position and test -->
+        <a href="Cart.html" class="Cart-Icon-Link" aria-label="Shopping Cart" style="position: relative; display: inline-block; margin-right: 10px; text-decoration: none;">
+
+          <div class="Cart-Icon-Wrapper iconbtn" style="position: relative; display: grid; place-items: center;">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="Cart-Icon-Badge" style="position: absolute; top: -8px; right: -8px; background: #8B5E3C; color: white; border-radius: 50%; width: 20px; height: 20px; display: none; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; line-height: 20px;">0</span>
+            
+          </div>
+
+        </a>
+
+         <!-- Dark and light mode  -->
+        <button class="Theme-toggle" aria-label="Toggle dark mode" type="button">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="carttitlebar">
+        <h1 class="carttitle">Shopping Cart</h1>
+      </section>
+
+      <section class="CartArea">
+        <div class="CartGrid">
+          <div class="CartLeft">
+            <div class="CartBox" id="cartBox">
+              <div style="text-align: center; padding: 40px;">
+
+                <p>Loading cart...</p>
+
+              </div>
+            </div>
+
+            <div id="emptyCartMessage" style="display: none; text-align: center; padding: 40px; border: 2px solid var(--bordermain); background: #fff;">
+
+              <p style="font-size: 18px; margin-bottom: 20px;">Your cart is empty</p>
+              <a href="ProductList.html?category=flower" style="display: inline-block; padding: 12px 24px; background: var(--primary); color: white; text-decoration: none; border-radius: 4px;">Start Shopping</a>
+
+            </div>
+
+            <a class="ContinueLink" href="ProductList.html?category=flower">Continue Shopping</a>
+          </div>
+
+          <div class="CartRight">
+
+            <h2 class="SummaryTitle">Order Summary</h2>
+
+            <div class="SummaryBox">
+              <div class="SumLine">
+
+                <span class="SumLabel">Sub Total</span>
+                <span class="SumEquation">=</span>
+                <span class="SumValue" data-type="subtotal">Rs.0.00</span>
+
+              </div>
+              
+              <!-- I fixed delivery charges -->
+              <div class="SumLine">
+
+                <span class="SumLabel">Delivery</span>
+                <span class="SumEquation">=</span>
+                <span class="SumValue" data-type="delivery">Rs.2,500.00</span>
+
+              </div>
+
+              <div class="SumLine SumSpacer"></div>
+              
+              <!-- Total will be updated by JS -->
+              <div class="SumLine SumTotal">
+
+                <span class="SumLabel">Total</span>
+                <span class="SumEquation">=</span>
+                <span class="SumValue" data-type="total">Rs.2,500.00</span>
+
+              </div>
+
+              <a class="CheckoutButton" href="OderConfirmation.html">Proceed to Checkout</a>
+
+            </div>
+          </div>
+        </div>
+
+        <button class="ChatButton Chat-Button" type="button" aria-label="Chatbot " id="chatButton">
+
+          <i class="fa-regular fa-comment-dots"></i>
+
+        </button>
+
+        <div class="Chat-Popup" id="chatPopup">
+          <div class="Chat-Popup-Header">
+            <h3>Chat with us</h3>
+            <button class="Chat-Close" type="button" aria-label="Close chat" id="chatClose">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+
+          <div class="Chat-Messages" id="chatMessages">
+            <div class="Chat-Message Chat-Message-Bot">
+              <p>Hello! How can we help you today?</p>
+            </div>
+
+          </div>
+          <div class="Chat-Input-Area">
+            <input type="text" id="chatInput" placeholder="Type your message..." />
+            <button type="button" class="Chat-Send" aria-label="Send message" id="chatSend">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="Footer">
+      <div class="FooterLeft">
+
+        <a href="HomePage.html" class="Footer-Logo">  <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" /> </a>
+
+        <h3>Loom & Lane</h3>
+        <p>
+          
+          A curated collection of handcrafted decor, wooden crafts and porcelain pieces celebrating
+          Sri Lankan craftsmanship.
+
+        </p>
+      </div>
+
+      <div class="Links">
+
+        <a href="HomePage.html">Home</a>
+        <a href="ProductList.html?category=flower">Shop</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+
+      </div>
+
+      <div class="FooterSocial">
+
+        <p>Follow Us</p>
+        <div class="socialicons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          
+        </div>
+      </div>
+    </footer>
+    <script src="../Js/cart.js"></script>
+    <script src="../Js/CartPage.js"></script>
+    <script src="../Js/theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loom & Lane - Home</title>
+  <link rel="stylesheet" href="../CSS/theme.css" />
+  <link rel="stylesheet" href="../CSS/HomePageDec.css" />
+  <link rel="stylesheet" href="../CSS/dark-theme-overrides.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--Header-->
+  <header class="Header">
+    <div class="logo">
+      <a href="HomePage.html"><img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" /></a>
+    </div>
+
+    <div class="HeaderRight">
+      <form class="SearchSection" role="search">
+        <label for="Search" class="VisuallyHidden">Search products</label>
+        <input id="Search" type="text" placeholder="Search products..." />
+        <button type="submit" aria-label="Search" class="SearchButton" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="HomePage.html">Home</a>
+        <a href="ProductList.html?category=flower">Shop</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+
+      <a href="Cart.html" class="CartIconLink" aria-label="Shopping Cart"
+        style="position: relative; display: inline-block; margin-right: 10px; text-decoration: none;">
+        <div class="CartIconWrapper"
+          style="border: 1px solid #111; background: #fff; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; padding: 0;">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="CartIconBadge"
+            style="position: absolute; top: -8px; right: -8px; background: #8B5E3C; color: white; border-radius: 50%; width: 20px; height: 20px; display: none; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; line-height: 20px;">0</span>
+        </div>
+      </a>
+      <button class="ThemeToggle" aria-label="Toggle dark mode" type="button">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="Hero">
+
+      <h1>Handcrafted Elegance for Modern Living</h1>
+      <p>Discover timeless Sri Lankan home decor</p>
+      <a href="ProductList.html?category=flower"><button class="PrimaryButton">Shop Now</button></a>
+
+    </section>
+
+    <section class="Wrap Promotions">
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="AlertContent">
+
+          <strong>New Year Offer!</strong> 10% off on selected wooden crafts this week.
+        </div>
+        <button type="button" class="ButtonClose" data-bs-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+    </section>
+
+    <section class="Wrap Featured">
+      <h2>Featured Products</h2>
+
+      <div id="Loader" class="Loader" aria-live="polite">
+
+        <div class="SpinnerBorder" role="status" aria-label="Loading"></div>
+        <span class="LoaderText">Loading products...</span>
+
+      </div>
+
+      <div class="ProductGrid" id="ProductGrid"></div>
+    </section>
+
+    <section class="Wrap Categories">
+      <div class="CategoryTop">
+        <h2>Shop by category</h2>
+      </div>
+
+      <div class="CategoryGrid" id="CategoryGrid"></div>
+    </section>
+
+    <section class="Wrap Branches" aria-label="Our Branches">
+
+      <p class="BranchTitle">Our Branches:</p>
+      <p><i class="fa-solid fa-location-dot"></i> Colombo</p>
+      <p><i class="fa-solid fa-location-dot"></i> Galle</p>
+      <p><i class="fa-solid fa-location-dot"></i> Kandy</p>
+      <p><i class="fa-solid fa-location-dot"></i> Kalutara</p>
+      <p><i class="fa-solid fa-location-dot"></i> Anuradhapura</p>
+
+    </section>
+
+    <button class="ChatButton" type="button" aria-label="Chat with us" id="ChatButton">
+      <i class="fa-solid fa-comment"></i>
+      <span>Chat with us</span>
+    </button>
+
+    <div class="ChatPopup" id="ChatPopup">
+      <div class="ChatPopupHeader">
+        <h3>Chat with us</h3>
+        <button class="ChatClose" type="button" aria-label="Close chat" id="ChatClose">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+
+      <div class="ChatMessages" id="ChatMessages">
+        <div class="ChatMessage ChatMessageBot">
+          <p>Hello! How can we help you today?</p>
+        </div>
+      </div>
+
+      <div class="ChatInputArea">
+        <input type="text" id="ChatInput" placeholder="Type your message..." />
+        <button type="button" class="ChatSend" aria-label="Send message" id="ChatSend">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="Footer">
+    <div class="FooterWrap FooterInner">
+
+      <div class="FooterLeft">
+        <a href="HomePage.html" class="FooterLogo">
+          <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" />
+        </a>
+        <h3> Loom & Lane </h3>
+        <p> A curated collection of handcrafted decor, wooden crafts and porcelain pieces celebrating Sri Lankan
+          craftsmanship. </p>
+      </div>
+
+      <nav class="FooterLinks" aria-label="Footer Links">
+
+        <a href="HomePage.html">Home</a>
+        <a href="ProductList.html?category=flower">Shop</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+
+      </nav>
+
+      <div class="FooterSocial">
+
+        <p>Follow Us</p>
+
+        <div class="SocialIcons">
+
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../Js/cart.js"></script>
+  <script src="../Js/HomePage.js"></script>
+  <script src="../Js/theme.js"></script>
+  <script src="../Js/chat.js"></script>
+
+</body>
+
+</html>

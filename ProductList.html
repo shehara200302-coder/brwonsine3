@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Loom & Lane</title>
+  <link rel="stylesheet" href="../CSS/theme.css" />
+  <link rel="stylesheet" href="../CSS/HomePageDec.css" />
+  <link rel="stylesheet" href="../CSS/ProductListFlower.css" />
+  <link rel="stylesheet" href="../CSS/dark-theme-overrides.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="Header">
+    <div class="logo">
+      <a href="HomePage.html"><img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" /></a>
+    </div>
+
+    <div class="HeaderRight">
+      <form class="SearchSection" role="search">
+        <label for="Search" class="VisuallyHidden">Search products</label>
+        <input id="Search" type="text" placeholder="Search products..." />
+        <button type="submit" aria-label="Search" class="SearchButton" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="HomePage.html">Home</a>
+        <a href="ProductList.html?category=flower">Shop</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+
+      <a href="Cart.html" class="CartIconLink" aria-label="Shopping Cart"
+        style="position: relative; display: inline-block; margin-right: 10px; text-decoration: none;">
+        <div class="CartIconWrapper"
+          style="border: 1px solid #111; background: #fff; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; padding: 0;">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="CartIconBadge"
+            style="position: absolute; top: -8px; right: -8px; background: #8B5E3C; color: white; border-radius: 50%; width: 20px; height: 20px; display: none; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; line-height: 20px;">0</span>
+        </div>
+      </a>
+      <button class="ThemeToggle" aria-label="Toggle dark mode" type="button">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="ProductsPage">
+    <h1 class="CategoryTitle" id="CategoryTitle">Category : FLOWER ARRANGEMENTS</h1>
+
+    <div class="ProductsLayout">
+      <!-- SIDEBAR -->
+      <aside class="SideBar">
+        <h2>Categories:</h2>
+        <ul class="SideList">
+          <li><a href="ProductList.html?category=wooden" id="LinkWooden">Wooden crafts</a></li>
+          <li><a href="ProductList.html?category=porcelain" id="LinkPorcelain">Porcelain items</a></li>
+          <li><a href="ProductList.html?category=home" id="LinkHome">Home decor</a></li>
+          <li><a href="ProductList.html?category=flower" id="LinkFlower">Flower arrangement</a></li>
+        </ul>
+
+        <h2>Price range</h2>
+        <div class="PriceSliderContainer">
+          <div class="PriceSliderLabels">
+            <span id="MinPrice">Rs.0.00</span>
+            <span id="MaxPrice">Rs.10,000.00</span>
+          </div>
+          <input type="range" id="PriceSlider" class="PriceSlider" min="0" max="10000" value="10000" step="1000" />
+          <p class="PriceSliderValue">Max: <span id="SliderValue">Rs.10,000.00</span></p>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS -->
+      <section class="ProductGrid" id="ProductGrid" aria-label="Products">
+        <!-- Products will be loaded dynamically by ProductList.js -->
+      </section>
+    </div>
+  </main>
+
+  <footer class="Footer">
+    <div class="Footer-wrap Footer-inner">
+      <div class="Footer-left">
+        <a href="HomePage.html" class="Footer-Logo">
+          <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" />
+        </a>
+        <h3>Loom & Lane</h3>
+        <p>
+          A curated collection of handcrafted decor, wooden crafts and porcelain pieces celebrating Sri Lankan
+          craftsmanship.
+        </p>
+      </div>
+
+      <nav class="Footer-links" aria-label="Footer Links">
+        <a href="HomePage.html">Home</a>
+        <a href="ProductList.html?category=flower">Shop</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+
+      <div class="Footer-Social">
+        <p>Follow Us</p>
+        <div class="Social-Icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="ChatButton" type="button" aria-label="Chat with us" id="ChatButton">
+    <i class="fa-solid fa-comment"></i>
+    <span>Chat with us</span>
+  </button>
+
+  <div class="ChatPopup" id="ChatPopup">
+    <div class="ChatPopupHeader">
+      <h3>Chat with us</h3>
+      <button class="ChatClose" type="button" aria-label="Close chat" id="ChatClose">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    <div class="ChatMessages" id="ChatMessages"></div>
+    <div class="ChatInputArea">
+      <input type="text" id="ChatInput" placeholder="Type your message..." />
+      <button class="ChatSend" type="button" id="ChatSend">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="../Js/cart.js"></script>
+  <script src="../Js/ProductList.js"></script>
+  <script src="../Js/theme.js"></script>
+  <script src="../Js/chat.js"></script>
+</body>
+
+</html>

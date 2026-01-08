@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Loom & Lane</title>
+    <link rel="stylesheet" href="../CSS/theme.css" />
+    <link rel="stylesheet" href="../CSS/HomePageDec.css" />
+    <link rel="stylesheet" href="../CSS/dark-theme-overrides.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+
+  <body>
+    <!-- Header is reused across pages for consistent navigation -->
+    <header class="Header">
+      <div class="logo">
+        <a href="HomePage.html"><img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" /></a>
+      </div>
+
+      <div class="Header-right">
+        <!-- Main navigation links -->
+        <nav class="nav" aria-label="Main Navigation">
+
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+
+        <!-- I used inline CSS code for crat icon, because it was quicker to position and test -->
+        <a href="Cart.html" class="Cart-Icon-Link" aria-label="Shopping Cart" style="position: relative; display: inline-block; margin-right: 10px; text-decoration: none;">
+          <div class="Cart-Icon-Wrapper" style="border: 1px solid #111; background: #fff; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; padding: 0;">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="Cart-Icon-Badge" style="position: absolute; top: -8px; right: -8px; background: #8B5E3C; color: white; border-radius: 50%; width: 20px; height: 20px; display: none; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; line-height: 20px;">0</span>
+          </div>
+
+        </a>
+        <button class="Theme-toggle" aria-label="Toggle dark mode" type="button">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+
+    </header>
+
+    <main>
+      <section class="Hero">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you</p>
+      </section>
+
+      <!-- This is two-column layout, form on the left and contact info on the right -->
+      <!--I  Used inline grid styles here instead of creating a new CSS file just for Contact page -->
+      <section class="Wrap" style="padding-top: 40px; padding-bottom: 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto;">
+          <div>
+            <h2 style="font-size: 28px; margin-bottom: 24px;">Send us a Message</h2>
+            <form style="display: flex; flex-direction: column; gap: 20px;">
+              <div>
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Name</label>
+                <input  type="text"  id="name"  name="name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; font-family: Arial, sans-serif;"/>
+              </div>
+
+              <div>
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Email</label>
+                <input  type="email"  id="email"  name="email"  required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; font-family: Arial, sans-serif;" />
+              </div>
+
+              <div>
+                <label for="subject" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Subject</label>
+                <input  type="text"   id="subject"   name="subject"   required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; font-family: Arial, sans-serif;" />
+              </div>
+
+              <div>
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Message</label>
+                <textarea  id="message" name="message"  rows="6"  required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; font-family: Arial, sans-serif; resize: vertical;" ></textarea>
+              </div>
+
+              <button type="submit" class="Primary-Button" style="align-self: flex-start; padding: 14px 32px; font-size: 16px; cursor: pointer;">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h2 style="font-size: 28px; margin-bottom: 24px;">Contact Information</h2>
+            
+            <div style="margin-bottom: 30px;">
+
+              <h3 style="font-size: 20px; margin-bottom: 16px; color: #8B5E3C;">
+                <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>Phone </h3>
+              <p style="font-size: 16px; color: #333; margin-left: 30px;">
+                +94 11 234 5678<br>
+                +94 77 123 4567
+              </p>
+
+            </div>
+
+            <div style="margin-bottom: 30px;">
+              <h3 style="font-size: 20px; margin-bottom: 16px; color: #8B5E3C;">
+                <i class="fa-solid fa-envelope" style="margin-right: 10px;"></i>Email
+              </h3>
+              <p style="font-size: 16px; color: #333; margin-left: 30px;">
+                info@loomandlane.lk<br>
+                support@loomandlane.lk
+              </p>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+              <h3 style="font-size: 20px; margin-bottom: 16px; color: #8B5E3C;">
+                <i class="fa-solid fa-clock" style="margin-right: 10px;"></i>Business Hours
+              </h3>
+              <p style="font-size: 16px; color: #333; margin-left: 30px;">
+                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                Saturday: 10:00 AM - 4:00 PM<br>
+                Sunday: Closed
+              </p>
+            </div>
+
+            <div>
+
+              <h3 style="font-size: 20px; margin-bottom: 16px; color: #8B5E3C;">
+                <i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i>Main Office
+              </h3>
+              <p style="font-size: 16px; color: #333; margin-left: 30px; line-height: 1.6;">
+                123 Galle Road,<br>
+                Colombo 03,<br>
+                Sri Lanka
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Branches -->
+      <section class="Wrap Branches" aria-label="Our Branches">
+
+        <p class="branch-title">Our Branches:</p>
+        <p><i class="fa-solid fa-location-dot"></i> Colombo</p>
+        <p><i class="fa-solid fa-location-dot"></i> Galle</p>
+        <p><i class="fa-solid fa-location-dot"></i> Kandy</p>
+        <p><i class="fa-solid fa-location-dot"></i> Kalutara</p>
+        <p><i class="fa-solid fa-location-dot"></i> Anuradhapura</p>
+
+      </section>
+
+      <!-- Chat Button -->
+      <button class="Chat-Button" type="button" aria-label="Chat with us" id="chatButton">
+        <i class="fa-solid fa-comment"></i>
+        <span>Chat with us</span>
+      </button>
+
+      <!-- Chat Popup -->
+      <div class="Chat-Popup" id="chatPopup">
+        <div class="Chat-Popup-Header">
+          <h3>Chat with us</h3>
+          <button class="Chat-Close" type="button" aria-label="Close chat" id="chatClose">
+            <i class="fa-solid fa-times"></i>
+          </button>
+
+        </div>
+        <div class="Chat-Messages" id="chatMessages">
+          <div class="Chat-Message Chat-Message-Bot">
+            <p>Hello! How can we help you today?</p>
+          </div>
+
+        </div>
+        <div class="Chat-Input-Area">
+          <input type="text" id="chatInput" placeholder="Type your message..." />
+          <button type="button" class="Chat-Send" aria-label="Send message" id="chatSend">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="Footer">
+      <div class="Footer-wrap Footer-inner">
+
+        <div class="Footer-left">
+          <a href="HomePage.html" class="Footer-Logo">
+            <img src="../Pictures/LOGO/LOGO.png" alt="Loom & Lane Logo" />
+          </a>
+          <h3>Loom & Lane</h3>
+          <p>
+            A curated collection of handcrafted decor, wooden crafts and porcelain pieces celebrating Sri Lankan craftsmanship.
+          </p>
+
+        </div>
+
+        <nav class="Footer-links" aria-label="Footer Links">
+
+          <a href="HomePage.html">Home</a>
+          <a href="ProductList.html?category=flower">Shop</a>
+          <a href="About.html">About</a>
+          <a href="Contact.html">Contact</a>
+
+        </nav>
+
+        <div class="Footer-Social">
+
+          <p>Follow Us</p>
+          
+          <div class="Social-Icons">
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../Js/cart.js"></script>
+    <script src="../Js/theme.js"></script>
+    <script src="../Js/chat.js"></script>
+  </body>
+</html>
+
+
